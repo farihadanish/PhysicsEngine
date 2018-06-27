@@ -26,38 +26,7 @@ class oneD
 			this->distance=clone.distance;
 			this->acceleration=clone.acceleration;
 		}
-		void settime(float time)
-		{
-			this->time=time;
-		}
-		void setvelocity(float velocity)
-		{
-			this->velocity=velocity;
-		}
-		void setdistance(float distance)
-		{
-			this->distance=distance;
-		}
-		void setacceleration(float acceleration)
-		{
-			this->acceleration=acceleration;
-		}
-		float gettime()
-		{
-			return this->time;
-		}
-		float getvelocity()
-		{
-			return this->velocity;
-		}
-		float getdistance()
-		{
-			return this->distance;
-		}
-		float getacceleration()
-		{
-			return this->acceleration;
-		}
+	
 		void display()
 		{
 			cout<<"enter time:"<<this->time<<endl;
