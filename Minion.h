@@ -13,14 +13,10 @@ class Minion: public CharacterBasic{
 			
 		}
 		
-		void walk(){
-			oneD calcAcceleration;//object created
-			cout<<"Acceleration is: "<<calcAcceleration.calculateAcceleration();
-		};
 		
 	private:
 		//enum state{walk, run, stop, climb, jump};
-		string name;
+		
 		string color;
 		
 		};
