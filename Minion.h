@@ -9,7 +9,14 @@ using namespace std;
 class Minion: public CharacterBasic{
 	
 	public:
-		Minion(){
+		Minion()
+		{
+			
+			void Minionlaugh()
+			{
+				cout<<"Huhuhahahehe"<<endl;
+			}
+			
 			
 		}
 		
@@ -17,7 +24,7 @@ class Minion: public CharacterBasic{
 	private:
 		//enum state{walk, run, stop, climb, jump};
 		
-		string color;
+		int eyes;
 		
 		};
 
