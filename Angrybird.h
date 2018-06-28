@@ -8,8 +8,6 @@ class Angrybird: public CharacterBasic{
 	public:
 		Angrybird()
 		{
-			this->color=0;
-			this->size=0;
 		}
 		Angrybird(string color,int size)
 		{
@@ -26,8 +24,7 @@ class Angrybird: public CharacterBasic{
 			cout<<"Color:"<<this->color<<endl;
 			cout<<"Size:"<<this->size<<endl;
 		}
-		
-		
+	
 		private:
 			string color;
 			int size;
