@@ -3,6 +3,7 @@
 
 using namespace std;
 
-class Motion{
+class Motion
+{
 	
 };

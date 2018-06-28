@@ -1,11 +1,7 @@
 #include<iostream>
 #include<string.h>
 #include"oneD.h"
-<<<<<<< HEAD
 //#include"twoD.h"
-=======
-
->>>>>>> 74b8b9d2a10e714f7f262300ad26bb6cc79a7962
 using namespace std;
 
 class CharacterBasic
