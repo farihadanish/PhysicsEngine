@@ -23,14 +23,12 @@ class Angrybird: public CharacterBasic{
 		}
 		void display()
 		{
-			cout<<"enter color:"<<this->color<<endl;
-			cout<<"enter size:"<<this->size<<endl;
+			cout<<"Color:"<<this->color<<endl;
+			cout<<"Size:"<<this->size<<endl;
 		}
 		
 		
 		private:
 			string color;
 			int size;
-			
-			
-		};
+};

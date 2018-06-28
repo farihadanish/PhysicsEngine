@@ -1,5 +1,5 @@
 #include<iostream>
-#include<string.h>
+#include<string>
 
 using namespace std;
 
@@ -29,10 +29,10 @@ class oneD
 	
 		void display()
 		{
-			cout<<"enter time:"<<this->time<<endl;
-			cout<<"enter velocity:"<<this->velocity<<endl;
-			cout<<"enter distance:"<<this->distance<<endl;
-			cout<<"enter acceleration:"<<this->acceleration<<endl;
+			cout<<"Time:"<<this->time<<endl;
+			cout<<"Velocity:"<<this->velocity<<endl;
+			cout<<"Distance:"<<this->distance<<endl;
+			cout<<"Acceleration:"<<this->acceleration<<endl;
 		}
 //		ostream&operator<<(ostream&o,oneD&M)//insertion overload
 //		{
@@ -51,20 +51,21 @@ class oneD
 		float distance;
 		int time;
 		
-		cout<<"Enter distance";
+		cout<<"Enter distance"<<endl;
 		cin>>distance;
-		cout<<"Enter time";
+		cout<<"Enter time"<<endl;
 		cin>>time;
 			float velocity = distance/time;
 			return velocity;
+		
 		}
 		float calculateAcceleration(){//to calculate acceleration
 			float velocity;
 			int time;
 			
-			cout<<"Enter velocity";
+			cout<<"Enter velocity"<<endl;
 			cin>>velocity;
-			cout<<"Enter Time";
+			cout<<"Enter Time"<<endl;
 			cin>>time;
 			
 			float acceleration = velocity/time;
@@ -74,33 +75,30 @@ class oneD
 		float distance;
 		float velocity;
 		
-		cout<<"Enter distance";
+		cout<<"Enter distance"<<endl;
 		cin>>distance;
-		cout<<"Enter velocity";
+		cout<<"Enter velocity"<<endl;
 		cin>>velocity;
 			float time = distance/velocity;
 			return time;
+	
 		}
 		float calculateDistance(){//to calculate distance
 		float velocity;
 		int time;
 		
-		cout<<"Enter velocity";
+		cout<<"Enter velocity"<<endl;
 		cin>>velocity;
-		cout<<"Enter time";
+		cout<<"Enter time"<<endl;
 		cin>>time;
 		    float distance = velocity*time;
 		    return distance;
+
 		}
-		
-		
-		
-		
+	
 		private:
         int time;
     	float velocity;
     	float distance;
     	float acceleration;
-    	
-		
 };
