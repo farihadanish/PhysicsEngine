@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string.h>
+#include"oneD.h"
 
 using namespace std;
 
