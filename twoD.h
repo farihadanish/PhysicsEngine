@@ -14,38 +14,38 @@ class twoD
 		{  
 		    this->g;
 			this->range=0;
-			this->velocity=0;
+			this->v=0;
 			this->maxHeight=0;
 			this->maxRange=0;
 		};
-		twoD(float range, float velocity, float maxH, float maxR)
+		twoD(float range, float v, float maxH, float maxR)
 		{
 			this->range=range;
-			this->velocity=velocity;
+			this->v=v;
 			this->maxHeight=maxH;	
 			this->maxRange=maxR;
 		};
 		twoD(twoD&clone)
 		{
 			this->range=clone.range;
-			this->velocity=clone.velocity;
+			this->v=clone.v;
 			this->maxHeight=clone.maxHeight;
 			this->maxRange=clone.maxRange;
 		};
 		
-	    void setvelocity(float velocity)
+	    void setv(float v)
 		{
-			this->velocity=velocity;
+			this->v=v;
 		};
-		float getvelocity()
+		float getv()
 		{
-			return this->velocity;
+			return this->v;
 		};
 		
 		void display()
 		{
 			cout<<"Gravity:"<<this->g<<endl;
-			cout<<"Velocity:"<<this->velocity<<endl;
+			cout<<"Velocity:"<<this->v<<endl;
 			cout<<"Range:"<<this->range<<endl;
 			cout<<"Maximum Height:"<<this->maxHeight<<endl;
 			cout<<"Maximum Range:"<<this->maxRange<<endl;
@@ -53,38 +53,66 @@ class twoD
 		
 		float Range() //calculate RANGE
 		{
-			float velocity;
-			float angle;
+			
 			cout<<"Enter initial velocity"<<endl;
-			cin>>velocity;
+			cin>>ini_v;
 			cout<<"Enter angle"<<endl;
 			cin>>angle;
-			float range=(velocity*velocity)/g*sin((2*angle)*PI/180);
+			float range=(v*v)/g*sin((2*angle)*PI/180);
 			return range;
 		};
 		float MaximumHeight() //calculate MAXIMUM HEIGHT
 		{
-			float velocity;
-			float angle;
+			
 			cout<<"Enter initial velocity"<<endl;
-			cin>>velocity;
+			cin>>ini_v;
 			cout<<"Enter angle"<<endl;
 			cin>>angle;
-			float maxheight=(velocity*velocity*sin(angle)*sin(angle))/2*g;
+			float maxheight=(ini_v*ini_v*sin(angle)*sin(angle))/2*g;
 			return maxheight;
-	    };
+	    }
 	    float MaximumRange() //calculate MAXIMUM RANGE AT 45 DEGREE ANGLE 
 	    {
-	    	float velocity;
+	    	
 	    	cout<<"Enter initial velocity"<<endl;
-			cin>>velocity;
-			float maxrange=(velocity*velocity)/g;
+			cin>>ini_v;
+			float maxrange=(ini_v*ini_v)/g;
 			return maxrange;
-		};
+		}
+		
+		float projectile_trajectory()
+{
+	
+cout<<"enter horizontal distance : " ;
+cin>>x;
+cout<<"enter initial velocity : " ;
+cin>>v;
+
+trajectory= (x*(tan(angle)) -  ((g*x*x)   / (2*v*v *(cos(angle)) * (cos(angle)) )     )    );		
+return trajectory;
+
+
+}
+
+
+float time_of_flight()
+{
+cout<<"enter initial velocity : ";
+cin>>v;
+flight_time=( ( 2*v*sin(angle) )  /  g);
+return flight_time;
+}
+
 					
 	private:
-		float velocity;	
+		float ini_v;
+		float angle;	
 	    float range; 
 		float maxHeight;  
 		float maxRange;	
+		float trajectory;
+		float t;
+		float x;
+		float v;
+		float flight_time;
 };

@@ -4,7 +4,7 @@
 #include "Angrybird.h"
 int main()
 {
-	Minion minion1;
+	/*Minion minion1;
 	minion1.walk();
 	
 	twoD v;
@@ -14,8 +14,11 @@ int main()
 	
 	Angrybird Angrybird;
 	Angrybird.jump();
+	//Angrybird.flight_time();
 	
-	
+	*/
+	twoD angrybird;
+	angrybird.time_of_flight();
 	return 0;
 }
 

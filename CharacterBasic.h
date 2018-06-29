@@ -16,6 +16,7 @@ class CharacterBasic
 			twoD calHeight; //object created
 			cout<<"Maximum height at which your character jumped is:"<<calHeight.MaximumHeight();
 		};
+		
 	private:
 		string name;
 	
