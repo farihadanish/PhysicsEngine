@@ -13,6 +13,23 @@ class Minion: public CharacterBasic
 		{	
 				
 		}
+		void setName(string name)
+		{
+			this->name=name;
+		}
+		void setEyes(int eyes)
+		{
+			this->eyes=eyes;
+		}
+		string getname()
+		{
+			return this->name;
+		}
+		int geteyes()
+		{
+			return this->eyes;
+		}
+		
 			
 		void Minionlaugh()
 		{

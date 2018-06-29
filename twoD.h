@@ -3,9 +3,10 @@
 #include<string>
 #define PI 3.14159265
 #include<math.h> 
+#include"Motion.h"
 using namespace std;
 
-class twoD
+class twoD:public Motion
 {
 	public:
 		static const float g= 9.8; //constant gravity  
@@ -14,38 +15,38 @@ class twoD
 		{  
 		    this->g;
 			this->range=0;
-			this->v=0;
+			this->velocity=0;
 			this->maxHeight=0;
 			this->maxRange=0;
 		};
-		twoD(float range, float v, float maxH, float maxR)
+		twoD(float range, float velocity, float maxHeight, float maxRange)
 		{
 			this->range=range;
-			this->v=v;
-			this->maxHeight=maxH;	
-			this->maxRange=maxR;
+			this->velocity=velocity;
+			this->maxHeight=maxHeight;	
+			this->maxRange=maxRange;
 		};
 		twoD(twoD&clone)
 		{
 			this->range=clone.range;
-			this->v=clone.v;
+			this->velocity=clone.velocity;
 			this->maxHeight=clone.maxHeight;
 			this->maxRange=clone.maxRange;
 		};
 		
-	    void setv(float v)
+	    void setVelocity(float velocity)
 		{
-			this->v=v;
+			this->velocity=velocity;
 		};
-		float getv()
+		float getVelocity()
 		{
-			return this->v;
+			return this->velocity;
 		};
 		
 		void display()
 		{
 			cout<<"Gravity:"<<this->g<<endl;
-			cout<<"Velocity:"<<this->v<<endl;
+			cout<<"Velocity:"<<this->velocity<<endl;
 			cout<<"Range:"<<this->range<<endl;
 			cout<<"Maximum Height:"<<this->maxHeight<<endl;
 			cout<<"Maximum Range:"<<this->maxRange<<endl;
@@ -55,64 +56,60 @@ class twoD
 		{
 			
 			cout<<"Enter initial velocity"<<endl;
-			cin>>ini_v;
+			cin>>velocity;
 			cout<<"Enter angle"<<endl;
 			cin>>angle;
-			float range=(v*v)/g*sin((2*angle)*PI/180);
+			float range=(velocity*velocity)/g*sin((2*angle)*PI/180);
 			return range;
 		};
 		float MaximumHeight() //calculate MAXIMUM HEIGHT
 		{
 			
 			cout<<"Enter initial velocity"<<endl;
-			cin>>ini_v;
+			cin>>velocity;
 			cout<<"Enter angle"<<endl;
 			cin>>angle;
-			float maxheight=(ini_v*ini_v*sin(angle)*sin(angle))/2*g;
+			float maxheight=(velocity*velocity*sin(angle)*sin(angle))/2*g;
 			return maxheight;
 	    }
 	    float MaximumRange() //calculate MAXIMUM RANGE AT 45 DEGREE ANGLE 
 	    {
 	    	
 	    	cout<<"Enter initial velocity"<<endl;
-			cin>>ini_v;
-			float maxrange=(ini_v*ini_v)/g;
+			cin>>velocity;
+			float maxrange=(velocity*velocity)/g;
 			return maxrange;
 		}
 		
-		float projectile_trajectory()
-{
-	
-cout<<"enter horizontal distance : " ;
-cin>>x;
-cout<<"enter initial velocity : " ;
-cin>>v;
+		float ProjectileTrajectory()
+        {
+	 
+        cout<<"enter horizontal distance:";
+        cin>>distance;
+        cout<<"enter initial velocity:";
+        cin>>velocity;
 
-trajectory= (x*(tan(angle)) -  ((g*x*x)   / (2*v*v *(cos(angle)) * (cos(angle)) )     )    );		
-return trajectory;
-
-
-}
+        float trajectory=(distance*(tan(angle))-((g*distance*distance)/(2*velocity*velocity*(cos(angle))*(cos(angle))) ) );		
+        return trajectory;
 
 
-float time_of_flight()
-{
-cout<<"enter initial velocity : ";
-cin>>v;
-flight_time=( ( 2*v*sin(angle) )  /  g);
-return flight_time;
-}
+        }
+
+
+        float TimeOfFlight()
+        {
+        cout<<"enter initial velocity:";
+        cin>>velocity;
+        flightTime=((2*velocity*sin(angle))/g);
+        return flightTime;
+        }
 
 					
 	private:
-		float ini_v;
 		float angle;	
 	    float range; 
 		float maxHeight;  
 		float maxRange;	
-		float trajectory;
-		float t;
-		float x;
-		float v;
-		float flight_time;
-};
+		float Trajectory;
+		float flightTime;
+   };

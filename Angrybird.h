@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string.h>
 #include"CharacterBasic.h"
+#include"twoD.h"
 using namespace std;
 
 
@@ -24,7 +25,12 @@ class Angrybird: public CharacterBasic{
 			cout<<"Color:"<<this->color<<endl;
 			cout<<"Size:"<<this->size<<endl;
 		}
-	
+	    void Angrybird_Launch()
+	    {
+	    	twoD calcRange;//object created
+	    	cout<<" range of Angrybird:"<<calcRange.Range();
+		};
+	    
 		private:
 			string color;
 			int size;

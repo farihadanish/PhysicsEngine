@@ -1,9 +1,10 @@
 #include<iostream>
 #include<string>
+#include"Motion.h"
 
 using namespace std;
 
-class oneD
+class oneD:public Motion
 
 {
 	public:
@@ -72,34 +73,19 @@ class oneD
 			float acceleration = velocity/time;
 			return acceleration;
 		}
+		
 		float calculateTime(){//to calculate time
-		float distance;
-		float velocity;
-		
-		cout<<"Enter distance"<<endl;
-		cin>>distance;
-		cout<<"Enter velocity"<<endl;
-		cin>>velocity;
-			float time = distance/velocity;
-			return time;
-	
-		}
-		float calculateDistance(){//to calculate distance
-		float velocity;
-		int time;
-		
-		cout<<"Enter velocity"<<endl;
-		cin>>velocity;
-		cout<<"Enter time"<<endl;
-		cin>>time;
-		    float distance = velocity*time;
-		    return distance;
-
-		}
+			float distance;
+			float velocity;
+			
+			cout<<"Enter distance"<<endl;
+			cin>>distance;
+			cout<<"Enter velocity"<<endl;
+			cin>>velocity;
+				float time = distance/velocity;
+				return time;
+				}
 	
 		private:
-        int time;
-    	float velocity;
-    	float distance;
     	float acceleration;
 };
