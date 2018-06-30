@@ -36,11 +36,7 @@ class Minion: public CharacterBasic
 			cout<<"Huhuhahahehe"<<endl;
 		};
 		
-		
-		
-	private:
-		//enum state{walk, run, stop, climb, jump};
-		
+	private:	
 		int eyes;
 };
 
