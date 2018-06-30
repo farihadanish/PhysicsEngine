@@ -31,7 +31,7 @@ class Minion: public CharacterBasic
 		}
 		
 			
-		void Minionlaugh()
+		void laugh()
 		{
 			cout<<"Huhuhahahehe"<<endl;
 		};

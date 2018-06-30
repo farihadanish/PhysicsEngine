@@ -1,10 +1,9 @@
 #include <iostream>
-#include "Minion.h"
-#include "Angrybird.h"
-#include "Mario.h"
+#include"Engine.h"
 
 int main()
 {
-
+	Engine engine;
+	engine.run();
 	
 }

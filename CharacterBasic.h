@@ -12,19 +12,19 @@ class CharacterBasic
 		{
 			cout<<"Minion is walking, what do you want to calculate?"<<endl;
 			int choice;
-			cout<<"1. Acceleration \n 2. Velocity \n 3. Distance"<<endl;
+			cout<<" 1. Acceleration \n 2. Velocity \n 3. Distance"<<endl;
 			cin>>choice;
 			oneD calc;
 			switch(choice)
 			{	
 				case 1:  
-					cout<<"Acceleration is: "<<calc.calculateAcceleration()<<endl;
+					cout<<"Acceleration is: "<<calc.calculateAcceleration()<<" m/s^2"<<endl;
 					break;
 				case 2:
-					cout<<"Velocity is: "<<calc.calculateVelocity();
+					cout<<"Velocity is: "<<calc.calculateVelocity()<<" m/s"<<endl;
 					break;
 				case 3:
-				    cout<<"Distance is: "<<calc.calculateDistance();
+				    cout<<"Distance is: "<<calc.calculateDistance()<<" m"<<endl;
 					break; 
 				default:
 					cout<<"Sorry, wrong input";
@@ -35,8 +35,12 @@ class CharacterBasic
 		void jump()
 		{
 			twoD calHeight; //object created
-			cout<<"Maximum height at which your character jumped is:"<<calHeight.MaximumHeight();
+			cout<<"Maximum height at which your character jumped is:"<<calHeight.MaximumHeight()<<" m"<<endl;
+			
 		};
+		void run()
+		{
+		}
 		
 	public:
 		string name;

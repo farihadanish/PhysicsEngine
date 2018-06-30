@@ -25,10 +25,10 @@ class Angrybird: public CharacterBasic{
 			cout<<"Color:"<<this->color<<endl;
 			cout<<"Size:"<<this->size<<endl;
 		}
-	    void Angrybird_Launch()
+	    void launch()
 	    {
 	    	twoD calcRange;//object created
-	    	cout<<" range of Angrybird:"<<calcRange.Range();
+	    	cout<<" range of Angrybird:"<<calcRange.Range()<<" m"<<endl;
 		};
 	    
 		private:
