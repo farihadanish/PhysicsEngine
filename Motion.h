@@ -11,24 +11,17 @@ class Motion
 	{
 		
 	}
-		float calculateDistance(){//to calculate distance
-		float velocity;
-		int time;
-		
+	float calculateDistance()
+	{//to calculate distance
 		cout<<"Enter velocity"<<endl;
 		cin>>velocity;
 		cout<<"Enter time"<<endl;
 		cin>>time;
-		    float distance = velocity*time;
-		    return distance;
-
-		}
-	
-	
+	    distance = velocity*time;
+        return distance;
+	}
 	public:
 		float distance;
 		float velocity;
-		float time;
-		
-		
+		float time;		
 };

@@ -1,3 +1,4 @@
+#pragma once 
 #include<iostream>
 #include<string>
 #include"Motion.h"
@@ -5,7 +6,6 @@
 using namespace std;
 
 class oneD:public Motion
-
 {
 	public:
 		oneD()
@@ -17,6 +17,7 @@ class oneD:public Motion
 		}
 		oneD(float time,float velocity,float distance,float acceleration)
 		{
+			this->time=time;
 			this->velocity=velocity;
 			this->distance=distance;
 			this->acceleration=acceleration;
@@ -28,7 +29,6 @@ class oneD:public Motion
 			this->distance=clone.distance;
 			this->acceleration=clone.acceleration;
 		}
-	
 		void display()
 		{
 			cout<<"Time:"<<this->time<<endl;
@@ -49,43 +49,36 @@ class oneD:public Motion
 //			this->acceleration=M.acceleration;
 //			return *this;
 //		}
-		float calculateVelocity(){//to calculate velocity
-		float distance;
-		int time;
-		
-		cout<<"Enter distance"<<endl;
-		cin>>distance;
-		cout<<"Enter time"<<endl;
-		cin>>time;
-			float velocity = distance/time;
+		float calculateVelocity()//to calculate velocity
+		{
+		    cout<<"Enter distance"<<endl;
+		    cin>>distance;
+	    	cout<<"Enter time"<<endl;
+	    	cin>>time;
+		    velocity = distance/time;
 			return velocity;
-		
 		}
-		float calculateAcceleration(){//to calculate acceleration
-			float velocity;
-			int time;
-			
+		float calculateAcceleration()//to calculate acceleration
+		{
 			cout<<"Enter velocity"<<endl;
 			cin>>velocity;
 			cout<<"Enter Time"<<endl;
 			cin>>time;
-			
-			float acceleration = velocity/time;
+		    acceleration = velocity/time;
 			return acceleration;
 		}
-		
-		float calculateTime(){//to calculate time
-			float distance;
-			float velocity;
-			
+		float calculateTime()//to calculate time
+		{
 			cout<<"Enter distance"<<endl;
 			cin>>distance;
 			cout<<"Enter velocity"<<endl;
 			cin>>velocity;
-				float time = distance/velocity;
-				return time;
-				}
-	
+		    time = distance/velocity;
+			return time;
+		}
 		private:
-    	float acceleration;
+			float time;
+			float velocity;
+			float distance;
+			float acceleration;
 };

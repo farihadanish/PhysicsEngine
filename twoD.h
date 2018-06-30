@@ -54,62 +54,54 @@ class twoD:public Motion
 		
 		float Range() //calculate RANGE
 		{
-			
 			cout<<"Enter initial velocity"<<endl;
 			cin>>velocity;
 			cout<<"Enter angle"<<endl;
 			cin>>angle;
-			float range=(velocity*velocity)/g*sin((2*angle)*PI/180);
+		    range=(velocity*velocity)/g*sin((2*angle)*PI/180);
 			return range;
 		};
+		
 		float MaximumHeight() //calculate MAXIMUM HEIGHT
 		{
-			
 			cout<<"Enter initial velocity"<<endl;
 			cin>>velocity;
 			cout<<"Enter angle"<<endl;
 			cin>>angle;
-			float maxheight=(velocity*velocity*sin(angle)*sin(angle))/2*g;
-			return maxheight;
-	    }
+		    maxHeight=(velocity*velocity*sin(angle)*sin(angle))/2*g;
+			return maxHeight;
+	    };
+	    
 	    float MaximumRange() //calculate MAXIMUM RANGE AT 45 DEGREE ANGLE 
 	    {
-	    	
 	    	cout<<"Enter initial velocity"<<endl;
 			cin>>velocity;
-			float maxrange=(velocity*velocity)/g;
-			return maxrange;
-		}
+		    maxRange=(velocity*velocity)/g;
+			return maxRange;
+		};
 		
 		float ProjectileTrajectory()
         {
-	 
-        cout<<"enter horizontal distance:";
-        cin>>distance;
-        cout<<"enter initial velocity:";
-        cin>>velocity;
-
-        float trajectory=(distance*(tan(angle))-((g*distance*distance)/(2*velocity*velocity*(cos(angle))*(cos(angle))) ) );		
-        return trajectory;
-
-
+            cout<<"Enter horizontal distance: ";
+            cin>>distance;
+            cout<<"Enter initial velocity: ";
+            cin>>velocity;
+            trajectory=(distance*(tan(angle))-((g*distance*distance)/(2*velocity*velocity*(cos(angle))*(cos(angle))) ) );		
+            return trajectory;
         }
-
-
         float TimeOfFlight()
         {
-        cout<<"enter initial velocity:";
-        cin>>velocity;
-        flightTime=((2*velocity*sin(angle))/g);
-        return flightTime;
+            cout<<"Enter initial velocity: ";
+            cin>>velocity;
+            flightTime=((2*velocity*sin(angle))/g);
+            return flightTime;
         }
-
-					
+						
 	private:
 		float angle;	
 	    float range; 
 		float maxHeight;  
 		float maxRange;	
-		float Trajectory;
+		float trajectory;
 		float flightTime;
-   };
+};
