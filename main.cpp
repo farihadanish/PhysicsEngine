@@ -5,7 +5,6 @@
 
 int main()
 {
-	Mario m;
-	m.Mario_Drive();
+
 	
 }
