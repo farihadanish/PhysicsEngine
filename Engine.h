@@ -13,11 +13,11 @@ class Engine{
 			int choice;
 			cout<<"\t\t\t WELCOME TO PHYSICS ENGINE"<<endl;
 			cout<<"Select your character:"<<endl;
-			cout<<" 1. Minion \n 2. Angrybird \n 3.Mario"<<endl;
+			cout<<" 1. Minion \n 2. Angrybird \n 3. Mario"<<endl;
 			cin>>choice;
 			if(choice==1){
-				cout<<"Your Minion has been created";
-				cout<<"Select the action: \n1. Walk \n2.Run \n3.Jump \n4.Laugh"<<endl;
+				cout<<"Your Minion has been created."<<endl;
+				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Laugh"<<endl;
 				int action;
 				cin>>action;
 				Minion minion1;
@@ -38,8 +38,8 @@ class Engine{
 			}
 			else if(choice==2)
 			{
-				cout<<"Your Angrybird has been created:"<<endl;
-				cout<<"Select the action: \n1. Walk \n2. Run \n3. Jump \n4. Launch"<<endl;
+				cout<<"Your Angrybird has been created."<<endl;
+				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Launch"<<endl;
 				int action;
 				cin>>action;
 				Angrybird angrybird1;
@@ -60,8 +60,8 @@ class Engine{
 			} 
 			else if(choice==3)
 			{
-				cout<<"Your Mario has been created:"<<endl;
-				cout<<"Select the action: \n1. Walk \n2. Run \n3. Jump \n4. Drive \n5. Swim"<<endl;
+				cout<<"Your Mario has been created."<<endl;
+				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Drive \n 5. Swim"<<endl;
 				int action;
 				cin>>action;
 				Mario mario1;

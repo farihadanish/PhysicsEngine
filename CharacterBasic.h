@@ -24,7 +24,7 @@ class CharacterBasic
 					cout<<"Character is walking with Velocity: "<<calc.calculateVelocity()<<" m/s"<<endl;
 					break;
 				case 3:
-				    cout<<"Character will cover distance of: "<<calc.calculateDistance()<<" m"<<endl;
+				    cout<<"Character has cover distance of: "<<calc.calculateDistance()<<" m"<<endl;
 					break; 
 				default:
 					cout<<"Sorry, wrong input";
@@ -33,7 +33,7 @@ class CharacterBasic
 		void jump()
 		{
 			twoD calHeight; //object created
-			cout<<"Maximum Height at which your character jumped is:"<<calHeight.MaximumHeight()<<" m"<<endl;
+			cout<<"Maximum Height at which your character jumped is: "<<calHeight.MaximumHeight()<<" m"<<endl;
 			
 		};
 		void run()

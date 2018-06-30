@@ -28,7 +28,7 @@ class Angrybird: public CharacterBasic{
 	    void launch()
 	    {
 	    	twoD calcRange;//object created
-	    	cout<<" range of Angrybird:"<<calcRange.Range()<<" m"<<endl;
+	    	cout<<"Range covered by Angrybird: "<<calcRange.Range()<<" m"<<endl;
 		};
 	    
 		private:
