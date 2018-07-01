@@ -18,7 +18,7 @@ class CharacterBasic
 			switch(choice)
 			{	
 				case 1:  
-					cout<<"Character is walking with Acceleration : "<<calc.calculateAcceleration()<<" m/s^2"<<endl;
+					cout<<"Character is walking with Acceleration: "<<calc.calculateAcceleration()<<" m/s^2"<<endl;
 					break;
 				case 2:
 					cout<<"Character is walking with Velocity: "<<calc.calculateVelocity()<<" m/s"<<endl;
@@ -32,12 +32,50 @@ class CharacterBasic
 		};
 		void jump()
 		{
-			twoD calHeight; //object created
-			cout<<"Maximum Height at which your character jumped is: "<<calHeight.MaximumHeight()<<" m"<<endl;
-			
+			cout<<"Character is jumping, what do you want to calculate?"<<endl;
+			int choice;
+			cout<<" 1. Maximum Height \n 2. Maimum Range \n 3. Projectile Trajectory \n 4. Time Of Flight"<<endl;
+			cin>>choice;
+			twoD calc;
+			switch(choice)
+			{
+				case 1:
+					cout<<"Character has jumped upto a maximum height of: "<<calc.MaximumHeight()<<" m"<<endl;
+					break;
+				case 2: 
+				    cout<<"Character has covered a maximum range of: "<<calc.MaximumRange()<<" m/kg"<<endl;
+				    break;
+				case 3:
+				    cout<<"Trajectory of jump: "<<calc.ProjectileTrajectory()<<" "<<endl;
+					break;
+				case 4:
+				    cout<<"Time taken: "<<calc.TimeOfFlight()<<" "<<endl;
+				    break;
+				default:
+					cout<<"Sorry, wrong input";
+		    }	
 		};
 		void run()
 		{
+			cout<<"Character is running, what do you want to calculate?"<<endl;
+			int choice;
+			cout<<" 1. Acceleration \n 2. Velocity \n 3. Distance"<<endl;
+			cin>>choice;
+			oneD calc;
+			switch(choice)
+			{	
+				case 1:  
+					cout<<"Character is running with Acceleration: "<<calc.calculateAcceleration()<<" m/s^2"<<endl;
+					break;
+				case 2:
+					cout<<"Character is running with Velocity: "<<calc.calculateVelocity()<<" m/s"<<endl;
+					break;
+				case 3:
+				    cout<<"Character has cover distance of: "<<calc.calculateDistance()<<" m"<<endl;
+					break; 
+				default:
+					cout<<"Sorry, wrong input";
+			}		
 		}
 		
 		virtual void laugh()
