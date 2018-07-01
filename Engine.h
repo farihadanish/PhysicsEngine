@@ -39,7 +39,7 @@ class Engine{
 			else if(choice==2)
 			{
 				cout<<"Your Angrybird has been created."<<endl;
-				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Launch"<<endl;
+				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Launch \n 5. Laugh"<<endl;
 				int action;
 				cin>>action;
 				Angrybird angrybird1;
@@ -56,12 +56,15 @@ class Engine{
 					case 4:
 						angrybird1.launch();
 						break;
+					case 5:
+						angrybird1.laugh();
+						break;	
 				}	
 			} 
 			else if(choice==3)
 			{
 				cout<<"Your Mario has been created."<<endl;
-				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Drive \n 5. Swim"<<endl;
+				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Drive \n 5. Swim \n 6. Laugh"<<endl;
 				int action;
 				cin>>action;
 				Mario mario1;
@@ -80,7 +83,10 @@ class Engine{
 						break;
 					case 5:
 						mario1.swim();
-						break;	
+						break;
+					case 6:
+					    mario1.laugh();
+					    break;
 				}
 			}
 			else{

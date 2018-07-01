@@ -29,13 +29,16 @@ class Minion: public CharacterBasic
 		{
 			return this->eyes;
 		}
-		
 			
 		void laugh()
 		{
 			cout<<"Huhuhahahehe"<<endl;
 		};
 		
+		~ Minion() //destructor
+		{
+			cout<<"Minion killed";
+		}		
 	private:	
 		int eyes;
 };

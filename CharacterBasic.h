@@ -40,6 +40,11 @@ class CharacterBasic
 		{
 		}
 		
+		virtual void laugh()
+		{
+			cout<<"hahahah"<<endl;
+		};
+		
 	public:
 		string name;
 	
