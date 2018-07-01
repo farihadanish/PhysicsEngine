@@ -2,26 +2,32 @@
 #include "Angrybird.h"
 #include "Mario.h"
 #include<iostream>
+using namespace std;
 
-class Engine{
+class Engine
+{
 	public:
-		Engine(){
+		Engine()
+		{
 			
 		}
 		
-		void run(){
+		void run()
+		{
 			int choice;
 			cout<<"\t\t\t WELCOME TO PHYSICS ENGINE"<<endl;
 			cout<<"Select your character:"<<endl;
 			cout<<" 1. Minion \n 2. Angrybird \n 3. Mario"<<endl;
 			cin>>choice;
-			if(choice==1){
+			if(choice==1)
+			{
 				cout<<"Your Minion has been created."<<endl;
 				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Laugh"<<endl;
 				int action;
 				cin>>action;
 				Minion minion1;
-				switch(action){
+				switch(action)
+				{
 					case 1:
 						minion1.walk();
 						break;
@@ -43,7 +49,8 @@ class Engine{
 				int action;
 				cin>>action;
 				Angrybird angrybird1;
-				switch(action){
+				switch(action)
+				{
 					case 1:
 						angrybird1.walk();
 						break;
@@ -68,7 +75,8 @@ class Engine{
 				int action;
 				cin>>action;
 				Mario mario1;
-				switch(action){
+				switch(action)
+				{
 					case 1:
 						mario1.walk();
 						break;
@@ -89,11 +97,9 @@ class Engine{
 					    break;
 				}
 			}
-			else{
-				cout<<"Wrong choice";
-				
+			else
+			{
+				cout<<"Wrong choice"<<endl;	
 			}
-			
-				
-			}
+	    }				
 };

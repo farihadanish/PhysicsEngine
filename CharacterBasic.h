@@ -27,7 +27,7 @@ class CharacterBasic
 				    cout<<"Character has cover distance of: "<<calc.calculateDistance()<<" m"<<endl;
 					break; 
 				default:
-					cout<<"Sorry, wrong input";
+					cout<<"Sorry, wrong input"<<endl;
 			}		
 		};
 		void jump()
@@ -52,14 +52,14 @@ class CharacterBasic
 				    cout<<"Time taken: "<<calc.TimeOfFlight()<<" "<<endl;
 				    break;
 				default:
-					cout<<"Sorry, wrong input";
+					cout<<"Sorry, wrong input"<<endl;
 		    }	
 		};
 		void run()
 		{
 			cout<<"Character is running, what do you want to calculate?"<<endl;
 			int choice;
-			cout<<" 1. Acceleration \n 2. Velocity \n 3. Distance"<<endl;
+			cout<<" 1. Acce3leration \n 2. Velocity \n 3. Distance"<<endl;
 			cin>>choice;
 			oneD calc;
 			switch(choice)
@@ -74,16 +74,13 @@ class CharacterBasic
 				    cout<<"Character has cover distance of: "<<calc.calculateDistance()<<" m"<<endl;
 					break; 
 				default:
-					cout<<"Sorry, wrong input";
+					cout<<"Sorry, wrong input"<<endl;
 			}		
 		}
-		
 		virtual void laugh()
 		{
 			cout<<"hahahah"<<endl;
-		};
-		
+		};	
 	public:
-		string name;
-	
+		string name;	
 };

@@ -2,7 +2,6 @@
 #include<iostream>
 #include<string>
 #include"Motion.h"
-
 using namespace std;
 
 class oneD:public Motion
@@ -40,15 +39,6 @@ class oneD:public Motion
 //		{
 //			return o<<"time:"<<M.gettime()<<endl<<"velocity:"<<M.getvelocity()<<endl<<"distance:"<<M.getdistance()<<endl<<"acceleration:"<<M.getacceleration()<<endl;
 //		}
-//		oneD &operator=(const oneD&M)//assignment overload
-//		{
-//			cout<<"assignment operator called";
-//			this->time=M.time;
-//			this->velocity=M.velocity;
-//			this->distance=M.distance;
-//			this->acceleration=M.acceleration;
-//			return *this;
-//		}
 		float calculateVelocity()//to calculate velocity
 		{
 		    cout<<"Enter distance"<<endl;
@@ -76,9 +66,4 @@ class oneD:public Motion
 		    time = distance/velocity;
 			return time;
 		}
-		private:
-			float time;
-			float velocity;
-			float distance;
-			float acceleration;
 };

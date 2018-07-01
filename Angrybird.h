@@ -4,8 +4,8 @@
 #include"twoD.h"
 using namespace std;
 
-
-class Angrybird: public CharacterBasic{
+class Angrybird: public CharacterBasic
+{
 	public:
 		Angrybird()
 		{
