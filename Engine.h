@@ -2,6 +2,7 @@
 #include "Angrybird.h"
 #include "Mario.h"
 #include<iostream>
+#include"Filing.h"
 using namespace std;
 
 class Engine
@@ -9,14 +10,15 @@ class Engine
 	public:
 		Engine()
 		{
-	
-
+			
 		}
 		
 		void start()
 		{
 			int choice;
 			char continueProgram;
+			Filing file;
+			
 			cout<<"\t\t\t WELCOME TO PHYSICS ENGINE"<<endl;
 			do{
 				cout<<"Select your character:"<<endl;
@@ -29,6 +31,7 @@ class Engine
 					int action;
 					cin>>action;
 					Minion minion1;
+					file.filewrite("Minion created");
 					switch(action)
 					{
 						case 1:
@@ -52,6 +55,7 @@ class Engine
 					int action;
 					cin>>action;
 					Angrybird angrybird1;
+					file.filewrite("Angrybird created");
 					switch(action)
 					{
 						case 1:
@@ -78,6 +82,7 @@ class Engine
 					int action;
 					cin>>action;
 					Mario mario1;
+					file.filewrite("Minion created");
 					switch(action)
 					{
 						case 1:
@@ -109,7 +114,8 @@ class Engine
 				cin>>continueProgram;
 			
 			}//do body
-			while(continueProgram == 'y' || choice == 'Y');
+			while(continueProgram == 'y' || continueProgram == 'Y');
+			file.filewrite("=================");
 		
 			
 	    }

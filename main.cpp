@@ -4,6 +4,5 @@
 int main()
 {
 	Engine engine;
-	engine.start();
-	
+	engine.start();	
 }

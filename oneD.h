@@ -35,10 +35,6 @@ class oneD:public Motion
 			cout<<"Distance:"<<this->distance<<endl;
 			cout<<"Acceleration:"<<this->acceleration<<endl;
 		}
-//		ostream&operator<<(ostream&o,oneD&M)//insertion overload
-//		{
-//			return o<<"time:"<<M.gettime()<<endl<<"velocity:"<<M.getvelocity()<<endl<<"distance:"<<M.getdistance()<<endl<<"acceleration:"<<M.getacceleration()<<endl;
-//		}
 		float calculateVelocity()//to calculate velocity
 		{
 		    cout<<"Enter distance"<<endl;
