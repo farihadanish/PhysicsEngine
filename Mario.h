@@ -57,13 +57,14 @@ class Mario : public CharacterBasic
 	
 	    void drive()
 	    {
-	    	cout<<"drive started"<<endl;
+	    	cout<<"Drive started"<<endl;
 		    oneD calcAcceleration; //object of oneD class
 		    cout<<"Mario is driving a car at "<<calcAcceleration.calculateAcceleration()<<" m/s^2"<<endl;
     	};	
 		
 		void swim()
-			{cout<<"swimming"<<endl;
+		{
+			cout<<"Swimming"<<endl;
 			Motion calcForce; //object of motion class
 			cout<<"Mario is swimming with force "<<calcForce.calculateForce()<<" N"<<endl;
 		};

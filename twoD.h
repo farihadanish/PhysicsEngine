@@ -82,17 +82,21 @@ class twoD:public Motion
 		
 		float ProjectileTrajectory()
         {
-            cout<<"Enter horizontal distance: ";
+            cout<<"Enter horizontal distance: "<<endl;
             cin>>distance;
-            cout<<"Enter initial velocity: ";
+            cout<<"Enter initial velocity: "<<endl;
             cin>>velocity;
+            cout<<"Enter angle"<<endl;
+			cin>>angle;
             trajectory=(distance*(tan(angle))-((g*distance*distance)/(2*velocity*velocity*(cos(angle))*(cos(angle))) ) );		
             return trajectory;
         }
         float TimeOfFlight()
         {
-            cout<<"Enter initial velocity: ";
+            cout<<"Enter initial velocity: "<<endl;
             cin>>velocity;
+            cout<<"Enter angle"<<endl;
+			cin>>angle;
             flightTime=((2*velocity*sin(angle))/g);
             return flightTime;
         }

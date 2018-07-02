@@ -27,28 +27,28 @@ class Angrybird: public CharacterBasic
 		}
 	    void launch()
 	    {
-	    	cout<<"your angrybird has been launched, what do you want?"<<endl;
+	    	cout<<"Your Angrybird has been launched, what do you want to calculate?"<<endl;
 	    		int choice;
-			cout<<"1. Height   2. Range	3.flightTime 4. trajectory "<<endl;
+			cout<<" 1. Height \n 2. Range \n 3. Time of flight \n 4. Trajectory "<<endl;
 			cin>>choice;
 			twoD calc;
 			switch(choice)
 			{	
 				case 1:  
-					cout<<"Character moved till height  of "<<calc.MaximumHeight()<<" m"<<endl;
+					cout<<"Character moved upto a height of: "<<calc.MaximumHeight()<<" m"<<endl;
 					break;
 				case 2:
-					cout<<"Character moved  "<<calc.MaximumRange()<<" m/kg"<<endl;
+					cout<<"Character moved: "<<calc.MaximumRange()<<" m/kg"<<endl;
 					break;
 				case 3:
-				    cout<<"Character was in flight for "<<calc.TimeOfFlight()<<" sec"<<endl;
+				    cout<<"Character was in flight for: "<<calc.TimeOfFlight()<<" sec"<<endl;
 					break; 
 				case 4:
-					cout<<"Character has covered trajectory of  "<<calc.ProjectileTrajectory()<<" m"<<endl;
+					cout<<"Character has covered trajectory of: "<<calc.ProjectileTrajectory()<<" m"<<endl;
 					break;
 
 				default:
-					cout<<"Sorry, wrong input";
+					cout<<"Sorry, wrong input"<<endl;
 			}		
 	    	
 		}
