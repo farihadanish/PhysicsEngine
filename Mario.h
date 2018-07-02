@@ -63,7 +63,7 @@ class Mario : public CharacterBasic
     	};	
 		
 		void swim()
-			{cout<<"swimming..."<<endl;
+			{cout<<"swimming"<<endl;
 			Motion calcForce; //object of motion class
 			cout<<"Mario is swimming with force "<<calcForce.calculateForce()<<" N"<<endl;
 		};

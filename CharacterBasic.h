@@ -10,13 +10,9 @@ class CharacterBasic
 	public:
 		CharacterBasic()
 		{
-				CharacterBasic *list[3];
-	   list[0]=new  Minion minion1 ;
-	   list[1]=new  AngryBird angrybird1;
-	  list[2]=new Mario mario1 ;
-	  
+		
 		}
-		virtual void walk()
+		void walk()
 		{
 			cout<<"Character is walking, what do you want to calculate?"<<endl;
 			int choice;
@@ -87,11 +83,4 @@ class CharacterBasic
 	public:
 		string name;	
 };
-/*~CharacterBasic():: class CharacterBasic
-{
-	delete[] *character;
-	for(i=0;i<=3;i++)
-	{
-		 character[i]=null;
-	}
-}*/
+
