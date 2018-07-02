@@ -8,7 +8,15 @@ using namespace std;
 class CharacterBasic
 {
 	public:
-		void walk()
+		CharacterBasic()
+		{
+				CharacterBasic *list[3];
+	   list[0]=new  Minion minion1 ;
+	   list[1]=new  AngryBird angrybird1;
+	  list[2]=new Mario mario1 ;
+	  
+		}
+		virtual void walk()
 		{
 			cout<<"Character is walking, what do you want to calculate?"<<endl;
 			int choice;
@@ -34,7 +42,7 @@ class CharacterBasic
 		{
 			cout<<"Character is jumping, what do you want to calculate?"<<endl;
 			int choice;
-			cout<<" 1. Maximum Height \n 2. Maimum Range \n 3. Projectile Trajectory \n 4. Time Of Flight"<<endl;
+			cout<<" 1. Maximum Height \n 2.Time Of Flight"<<endl;
 			cin>>choice;
 			twoD calc;
 			switch(choice)
@@ -43,13 +51,8 @@ class CharacterBasic
 					cout<<"Character has jumped upto a maximum height of: "<<calc.MaximumHeight()<<" m"<<endl;
 					break;
 				case 2: 
-				    cout<<"Character has covered a maximum range of: "<<calc.MaximumRange()<<" m/kg"<<endl;
-				    break;
-				case 3:
-				    cout<<"Trajectory of jump: "<<calc.ProjectileTrajectory()<<" "<<endl;
-					break;
-				case 4:
-				    cout<<"Time taken: "<<calc.TimeOfFlight()<<" "<<endl;
+				    
+				    cout<<"Time taken: "<<calc.TimeOfFlight()<<"sec "<<endl;
 				    break;
 				default:
 					cout<<"Sorry, wrong input"<<endl;
@@ -59,7 +62,7 @@ class CharacterBasic
 		{
 			cout<<"Character is running, what do you want to calculate?"<<endl;
 			int choice;
-			cout<<" 1. Acce3leration \n 2. Velocity \n 3. Distance"<<endl;
+			cout<<" 1. Acceleration \n 2. Velocity \n 3. Distance"<<endl;
 			cin>>choice;
 			oneD calc;
 			switch(choice)
@@ -84,3 +87,11 @@ class CharacterBasic
 	public:
 		string name;	
 };
+/*~CharacterBasic():: class CharacterBasic
+{
+	delete[] *character;
+	for(i=0;i<=3;i++)
+	{
+		 character[i]=null;
+	}
+}*/

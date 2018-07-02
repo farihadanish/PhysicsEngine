@@ -27,9 +27,31 @@ class Angrybird: public CharacterBasic
 		}
 	    void launch()
 	    {
-	    	twoD calcRange;//object created
-	    	cout<<"Range covered by Angrybird: "<<calcRange.Range()<<" m/kg"<<endl;
-		};
+	    	cout<<"your angrybird has been launched, what do you want?"<<endl;
+	    		int choice;
+			cout<<"1. Height   2. Range	3.flightTime 4. trajectory "<<endl;
+			cin>>choice;
+			twoD calc;
+			switch(choice)
+			{	
+				case 1:  
+					cout<<"Character moved till height  of "<<calc.MaximumHeight()<<" m"<<endl;
+					break;
+				case 2:
+					cout<<"Character moved  "<<calc.MaximumRange()<<" m/kg"<<endl;
+					break;
+				case 3:
+				    cout<<"Character was in flight for "<<calc.TimeOfFlight()<<" sec"<<endl;
+					break; 
+				case 4:
+					cout<<"Character has covered trajectory of  "<<calc.ProjectileTrajectory()<<" m"<<endl;
+					break;
+
+				default:
+					cout<<"Sorry, wrong input";
+			}		
+	    	
+		}
 	    
 		private:
 			string color;

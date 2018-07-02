@@ -38,6 +38,7 @@ class Minion: public CharacterBasic
 		}		
 	private:	
 		int eyes;
+		string name;
 };
 
 

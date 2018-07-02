@@ -9,10 +9,11 @@ class Engine
 	public:
 		Engine()
 		{
-			
+	
+
 		}
 		
-		void run()
+		void start()
 		{
 			int choice;
 			cout<<"\t\t\t WELCOME TO PHYSICS ENGINE"<<endl;
@@ -25,11 +26,11 @@ class Engine
 				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Laugh"<<endl;
 				int action;
 				cin>>action;
-				Minion minion1;
+			//	Minion minion1;
 				switch(action)
 				{
 					case 1:
-						minion1.walk();
+						minion1->walk();
 						break;
 					case 2:
 						minion1.run();
@@ -48,7 +49,7 @@ class Engine
 				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Launch \n 5. Laugh"<<endl;
 				int action;
 				cin>>action;
-				Angrybird angrybird1;
+			//	Angrybird angrybird1;
 				switch(action)
 				{
 					case 1:
@@ -74,7 +75,7 @@ class Engine
 				cout<<"Select the action: \n 1. Walk \n 2. Run \n 3. Jump \n 4. Drive \n 5. Swim \n 6. Laugh"<<endl;
 				int action;
 				cin>>action;
-				Mario mario1;
+			//	Mario mario1;
 				switch(action)
 				{
 					case 1:

@@ -12,7 +12,7 @@ class Mario : public CharacterBasic
 	    	this->color=" ";
 	    	this->material=" ";
 	    };
-    	Mario(string color,int size)
+    	Mario(string color,string material)
 	    {
 	    	this->color=color;
 		    this->material=material;
@@ -57,12 +57,13 @@ class Mario : public CharacterBasic
 	
 	    void drive()
 	    {
+	    	cout<<"drive started"<<endl;
 		    oneD calcAcceleration; //object of oneD class
 		    cout<<"Mario is driving a car at "<<calcAcceleration.calculateAcceleration()<<" m/s^2"<<endl;
     	};	
 		
 		void swim()
-		{
+			{cout<<"swimming..."<<endl;
 			Motion calcForce; //object of motion class
 			cout<<"Mario is swimming with force "<<calcForce.calculateForce()<<" N"<<endl;
 		};
